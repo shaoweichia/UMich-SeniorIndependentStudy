@@ -192,7 +192,8 @@ fit.h1.complement <- sem(model = model.h1.complement,
 fit.h1.complement.summary <- tidy(fit.h1.complement,
                                   conf.int = TRUE,
                                   conf.level = 0.95,
-                                  boot.ci.type = "bca.simple")
+                                  boot.ci.type = "bca.simple",
+                                  rsquare = TRUE)
 
 # Test if the indirect effects are equal to each other
 # Initialize contrast model
@@ -229,7 +230,8 @@ constrain.fit.h1.complement <- sem(model = constrain.model.h1.complement,
 constrain.fit.h1.complement.summary <- tidy(fit.h1.complement,
                                             conf.int = TRUE,
                                             conf.level = 0.95,
-                                            boot.ci.type = "bca.simple")
+                                            boot.ci.type = "bca.simple",
+                                            rsquare = TRUE)
 
 # Export model summary to CSV
 write_csv(constrain.fit.h1.complement.summary,
@@ -267,7 +269,8 @@ fit.h1.supplement <- sem(model = model.h1.supplement,
 fit.h1.supplement.summary <- tidy(fit.h1.supplement,
                                   conf.int = TRUE,
                                   conf.level = 0.95,
-                                  boot.ci.type = "bca.simple")
+                                  boot.ci.type = "bca.simple",
+                                  rsquare = TRUE)
 
 # Test if the indirect effects are equal to each other
 # Initialize contrast model
@@ -303,7 +306,8 @@ contrast.fit.h1.supplement <- sem(model = contrast.model.h1.supplement,
 contrast.fit.h1.supplement.summary <- tidy(contrast.fit.h1.supplement,
                                            conf.int = TRUE,
                                            conf.level = 0.95,
-                                           boot.ci.type = "bca.simple")
+                                           boot.ci.type = "bca.simple",
+                                           rsquare = TRUE)
 
 # Export model summary to CSV
 write_csv(contrast.fit.h1.supplement.summary,
